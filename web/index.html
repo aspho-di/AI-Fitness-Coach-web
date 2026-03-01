@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Fitness Coach — Download</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACYUlEQVR4nO1by23DMAyVjQKGL+6lk2SIjtNhukHXyEy9JJfAJ+dQyHX0J0VSsq13SgObEh8fSTWSOiWEYZwWyPPz495xzWULtkGgDsfARQi5UWrHTVATQWaM23ETVERkG8E6Pv9+27Y+vuB2MolAv5wTcZfzq10ECUrhiUC9ROX81lnf9yDbCBJ66Asczpt/hxQSAmZuyQQM47RQFTpfhLGRf7EBnGcSAdIVngKpc44SsEfnNVLmDq4BFPDlODb3cxAkgDr6oUJH0QWcY0Z88LYNTulzrAOiY3papFMB3HnP2QW8Y3p8crISIgCTp7k9nooYlwrerMEYol+iuLkwjNNikmAREDUCjEYtzvvwwkaJnq8J4sx/a8yNCoqsA2rCSsCeV3xQbH0trgBJ6bvQK1VH9KWLpfa5uAJKoxFQegKl0deQ/6UwjNNyegV0kgqYr7e/D5efpOclWmRTgJQCdPSHz/e054X+Rzi9AhoBEoNA5a/Uv/S5l8hNAVIDQaK/vnOENrj2/hwbjGnQUoDzNBam+JngLIbz496xKGC+3kikb9llIIGcAGrHQ3uIFCAlwOc8lhSJXeReKblTmTVB+9y6gP5AoQJftcd2Aa5dZNadoZyW57QXOE1GASvq5IecM9cC1L8LmEpvNcD8grojUKQE5wEJMQVg1gIS22VOAo64LgAdkgq9gIFOA4gKKItfyJdgChxBCTEfxH8RSlGB5LGZKAF7VkHK3JOd29smamrgwNGtnQioYsE1oOaUELkygx2IG6KXprYonRLFrs2ZOO3FSROnvTpr4rSXp32o9fr8E5sUJB9IoQWAAAAAAElFTkSuQmCC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/landing/styles.css">
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor"      id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Grid background -->
+  <div class="grid-bg"></div>
+
+  <!-- ── NAV ─────────────────────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-logo">AI FITNESS COACH</div>
+    <ul class="nav-links">
+      <li><a href="#install">Install</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#requirements">Requirements</a></li>
+    </ul>
+    <a class="nav-dl" href="https://github.com/aspho-di/AI-Fitness-Coach/releases/latest/download/AI_Fitness_Coach.exe">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download .exe
+    </a>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="orb-1 orb"></div>
+    <div class="orb-2 orb"></div>
+
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>COMPUTER VISION · FREE DOWNLOAD
+      </div>
+
+      <h1 class="hero-title">
+        YOUR<br>
+        PERSONAL<br>
+        <span class="grad">SQUAT<br>COACH</span>
+      </h1>
+
+      <p class="hero-desc">
+        Real-time squat analysis with <strong>MediaPipe</strong> and <strong>OpenCV</strong>.
+        Counts reps, checks your form, auto-calibrates to any camera position.
+        No gym required, no subscription, no cloud — runs entirely on your machine.
+      </p>
+
+    </div>
+
+    <!-- Right: terminal mockup -->
+    <div class="hero-right">
+      <div class="terminal">
+        <div class="term-bar">
+          <span class="tdot tdot-r"></span>
+          <span class="tdot tdot-y"></span>
+          <span class="tdot tdot-g"></span>
+          <span class="term-title">AI_Fitness_Coach.exe</span>
+        </div>
+        <div class="term-body">
+          <div><span class="t-ok">✓</span> <span class="t-out">Loading MediaPipe model...</span></div>
+          <div><span class="t-ok">✓</span> <span class="t-out">Camera initialized (index 0)</span></div>
+          <div><span class="t-info">◎</span> <span class="t-warn">Calibration: stand straight...</span></div>
+
+          <div class="term-preview">
+            <div class="skel-mini">
+              <svg id="skel-svg" viewBox="0 0 80 140" fill="none">
+                <!-- Head -->
+                <circle id="sk-head" cx="40" cy="10" r="7" stroke="#00f5a0" stroke-width="1.2" fill="none" opacity="0.85"/>
+                <!-- Neck to shoulders -->
+                <line id="sk-neck"  x1="40" y1="17" x2="40" y2="26" stroke="#00f5a0" stroke-width="1.2" opacity="0.6"/>
+                <!-- Shoulders bar -->
+                <line id="sk-sbar"  x1="20" y1="26" x2="60" y2="26" stroke="#00f5a0" stroke-width="1.2" opacity="0.6"/>
+                <!-- Torso -->
+                <line id="sk-torso" x1="40" y1="26" x2="40" y2="58" stroke="#00f5a0" stroke-width="1.2" opacity="0.6"/>
+                <!-- Hips bar -->
+                <line id="sk-hbar"  x1="26" y1="58" x2="54" y2="58" stroke="#00f5a0" stroke-width="1.2" opacity="0.6"/>
+
+                <!-- Left arm: shoulder → elbow → wrist -->
+                <line id="sk-larm1" x1="20" y1="26" x2="10" y2="44" stroke="#00f5a0" stroke-width="1.2" opacity="0.8"/>
+                <line id="sk-larm2" x1="10" y1="44" x2="8"  y2="58" stroke="#00f5a0" stroke-width="1.2" opacity="0.8"/>
+                <!-- Right arm: shoulder → elbow → wrist -->
+                <line id="sk-rarm1" x1="60" y1="26" x2="70" y2="44" stroke="#00f5a0" stroke-width="1.2" opacity="0.8"/>
+                <line id="sk-rarm2" x1="70" y1="44" x2="72" y2="58" stroke="#00f5a0" stroke-width="1.2" opacity="0.8"/>
+
+                <!-- Left leg: hip → knee → ankle -->
+                <line id="sk-lleg1" x1="26" y1="58" x2="22" y2="90" stroke="#00c3ff" stroke-width="1.5" opacity="0.9"/>
+                <line id="sk-lleg2" x1="22" y1="90" x2="26" y2="120" stroke="#00c3ff" stroke-width="1.5" opacity="0.9"/>
+                <!-- Right leg: hip → knee → ankle -->
+                <line id="sk-rleg1" x1="54" y1="58" x2="58" y2="90" stroke="#00f5a0" stroke-width="1.5" opacity="0.9"/>
+                <line id="sk-rleg2" x1="58" y1="90" x2="54" y2="120" stroke="#00f5a0" stroke-width="1.5" opacity="0.9"/>
+
+                <!-- Joints -->
+                <circle id="sk-chest"  cx="40" cy="26" r="2.5" fill="#00f5a0" opacity="0.9"/>
+                <circle id="sk-hip"    cx="40" cy="58" r="2.5" fill="#00f5a0" opacity="0.9"/>
+                <circle id="sk-lknee"  cx="22" cy="90" r="3.5" fill="#00c3ff" opacity="1"/>
+                <circle id="sk-rknee"  cx="58" cy="90" r="3.5" fill="#00f5a0" opacity="1"/>
+                <circle id="sk-lelbow" cx="10" cy="44" r="2"   fill="#00f5a0" opacity="0.8"/>
+                <circle id="sk-relbow" cx="70" cy="44" r="2"   fill="#00f5a0" opacity="0.8"/>
+              </svg>
+            </div>
+            <div class="preview-stats">
+              <div class="ps-row">
+                <div class="ps-label">SQUATS</div>
+                <div class="ps-val" style="color:var(--accent)" id="anim-count">0</div>
+              </div>
+              <div class="ps-row">
+                <div class="ps-label">ANGLE</div>
+                <div class="ps-val" style="color:var(--blue)" id="anim-angle">160°</div>
+                <div class="ps-bar"><div class="ps-fill" id="anim-bar" style="width:10%"></div></div>
+              </div>
+              <div class="ps-row">
+                <div class="ps-label">STAGE</div>
+                <div class="ps-val" style="color:var(--accent)" id="anim-stage">UP</div>
+              </div>
+            </div>
+          </div>
+
+          <div><span class="t-ok">✓</span> <span class="t-out">Calibration complete</span></div>
+          <div><span class="t-ok">✓</span> <span class="t-out">UP threshold: <span style="color:var(--accent)">142°</span> &nbsp;DOWN threshold: <span style="color:var(--blue)">68°</span></span></div>
+          <div style="margin-top:4px">
+            <span class="t-prompt">→</span>
+            <span class="t-cmd">Tracking squats...</span>
+            <span class="t-cursor"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Download buttons under terminal -->
+      <div class="dl-group">
+        <a class="dl-primary" href="https://github.com/aspho-di/AI-Fitness-Coach/releases/latest/download/AI_Fitness_Coach.exe">
+          <div class="dl-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <div class="dl-info">
+            <div class="dl-label">DOWNLOAD FOR WINDOWS</div>
+            <div class="dl-meta">AI_Fitness_Coach.exe · Standalone · No install</div>
+          </div>
+          <div class="dl-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+        </a>
+
+        <a class="dl-secondary" href="https://github.com/aspho-di/AI-Fitness-Coach/releases/latest/download/AI_Fitness_Coach.zip">
+          <div class="dl-icon-box">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="dl-info">
+            <div class="dl-label" style="color:var(--text);">PYTHON SOURCE (.ZIP)</div>
+            <div class="dl-meta" style="color:var(--muted);">Requires Python 3.10+ · For developers</div>
+          </div>
+          <div class="dl-arrow" style="color:var(--muted);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+        </a>
+      </div>
+      <div class="dl-note">Free &amp; open source · Windows 10/11 · ~50 MB</div>
+    </div>
+
+  </section>
+
+  <!-- ── REQUIREMENTS ──────────────────────────────────────────────────── -->
+  <section class="req-section" id="requirements">
+    <div class="req-inner">
+      <div class="stag reveal">System requirements</div>
+      <h2 class="stitle reveal">RUNS ON <span class="grad-text">ANY LAPTOP</span></h2>
+      <p class="ssub reveal">No GPU, no cloud, no subscription. Just a webcam.</p>
+
+      <div class="req-grid reveal">
+        <div class="req-card">
+          <div class="req-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <div class="req-name">FOR .EXE (NO PYTHON)</div>
+          <ul class="req-items">
+            <li>Windows 10 or 11 (64-bit)</li>
+            <li>Webcam or USB camera</li>
+            <li>4 GB RAM minimum</li>
+            <li>~50 MB disk space</li>
+            <li>No Python required</li>
+          </ul>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <div class="req-name">FOR ZIP (PYTHON)</div>
+          <ul class="req-items">
+            <li>Python 3.10 or newer</li>
+            <li>pip install requirements</li>
+            <li>Windows / macOS / Linux</li>
+            <li>Webcam or USB camera</li>
+            <li>4 GB RAM minimum</li>
+          </ul>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <div class="req-name">PERFORMANCE</div>
+          <ul class="req-items">
+            <li>30+ FPS on Intel Core i5</li>
+            <li>GPU not required</li>
+            <li>Real-time pose detection</li>
+            <li>~15% CPU load typical</li>
+            <li>Works with bad lighting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INSTALL STEPS ─────────────────────────────────────────────────── -->
+  <section class="install-section" id="install">
+    <div class="install-inner">
+      <div class="stag reveal">Quick start</div>
+      <h2 class="stitle reveal">UP AND RUNNING<br><span class="grad-text">IN 60 SECONDS</span></h2>
+
+      <div class="steps-row reveal">
+        <div class="step-box">
+          <div class="step-num">01</div>
+          <div class="step-head">DOWNLOAD</div>
+          <p class="step-text">
+            Click the download button and save
+            <code style="color:var(--accent);font-family:'JetBrains Mono',monospace">AI_Fitness_Coach.exe</code>
+            anywhere on your computer.
+          </p>
+        </div>
+        <div class="step-box">
+          <div class="step-num">02</div>
+          <div class="step-head">RUN</div>
+          <p class="step-text">Double-click the file. Windows may show a SmartScreen warning — click "More info" → "Run anyway". It's safe.</p>
+        </div>
+        <div class="step-box">
+          <div class="step-num">03</div>
+          <div class="step-head">CALIBRATE</div>
+          <p class="step-text">Stand in front of your camera. The app will ask you to stand straight, then squat — and auto-set your thresholds.</p>
+        </div>
+        <div class="step-box">
+          <div class="step-num">04</div>
+          <div class="step-head">TRAIN</div>
+          <p class="step-text">Start squatting. The tracker counts reps and warns you about round back or knee collapse in real-time.</p>
+        </div>
+      </div>
+
+      <div class="python-note reveal">
+        <span class="python-note-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/>
+          </svg>
+        </span>
+        <div>
+          <div class="python-note-title">PYTHON VERSION SETUP</div>
+          <div class="python-note-body">
+            Unzip the archive, then run in terminal:<br>
+            <span>pip install opencv-python mediapipe numpy</span><br>
+            <span>python main.py</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURES ──────────────────────────────────────────────────────── -->
+  <section class="feat-section" id="features">
+    <div class="feat-inner">
+      <div class="stag reveal">Features</div>
+      <h2 class="stitle reveal">WHAT IT DOES</h2>
+      <p class="ssub reveal">A proper biomechanics analyzer, not just a rep counter.</p>
+
+      <div class="feat-grid reveal">
+        <div class="feat-card">
+          <span class="feat-emoji">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+          </span>
+          <div class="feat-name">AUTO CALIBRATION</div>
+          <p class="feat-desc">Stands up and squats once at startup — automatically sets thresholds for your body and camera angle. No manual config.</p>
+        </div>
+        <div class="feat-card">
+          <span class="feat-emoji">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 20h20"/><path d="M7 20V8l5-5 5 5v12"/><path d="M12 20v-8"/>
+            </svg>
+          </span>
+          <div class="feat-name">3D ANGLE MATH</div>
+          <p class="feat-desc">Uses MediaPipe's z-depth coordinates and dot product formula. Accurate knee angle at any camera position — even diagonal.</p>
+        </div>
+        <div class="feat-card">
+          <span class="feat-emoji">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </span>
+          <div class="feat-name">FORM WARNINGS</div>
+          <p class="feat-desc">Detects round back (shoulder/hip angle) and knee cave-in (3D lateral deviation) in real-time with color-coded alerts.</p>
+        </div>
+        <div class="feat-card">
+          <span class="feat-emoji">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+            </svg>
+          </span>
+          <div class="feat-name">AUTO LEG SELECTION</div>
+          <p class="feat-desc">Compares MediaPipe visibility scores for both legs and always tracks the one the camera can see better.</p>
+        </div>
+        <div class="feat-card">
+          <span class="feat-emoji">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </span>
+          <div class="feat-name">33 KEYPOINTS</div>
+          <p class="feat-desc">Full MediaPipe Pose model tracks 33 body landmarks including hands, face and feet — full skeleton overlay on video.</p>
+        </div>
+        <div class="feat-card">
+          <span class="feat-emoji">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/>
+            </svg>
+          </span>
+          <div class="feat-name">VIDEO FILE SUPPORT</div>
+          <p class="feat-desc">Works with pre-recorded videos as well as live webcam. Useful for reviewing form from a recorded workout session.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ───────────────────────────────────────────────────────────── -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <div class="stag cta-stag reveal">Download now</div>
+      <h2 class="cta-title reveal">FREE.<br><span class="grad-text">FOREVER.</span></h2>
+      <p class="cta-sub reveal">No account. No subscription. No data sent anywhere. Runs 100% offline on your machine.</p>
+
+      <div class="cta-dl-group reveal">
+        <a class="cta-btn-exe" href="https://github.com/aspho-di/AI-Fitness-Coach/releases/latest/download/AI_Fitness_Coach.exe">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          DOWNLOAD .EXE &nbsp;(WINDOWS)
+        </a>
+        <a class="cta-btn-zip" href="https://github.com/aspho-di/AI-Fitness-Coach/releases/latest/download/AI_Fitness_Coach.zip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          PYTHON SOURCE (.ZIP)
+        </a>
+      </div>
+
+      <div class="version-tag reveal">
+        <span class="vtag-dot"></span>
+        v1.0.0 · Python 3.10+ · MediaPipe 0.10 · OpenCV 4.x · Open source
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-logo">AI FITNESS COACH</div>
+    <div class="footer-note">Built with Python · MediaPipe · OpenCV · NumPy</div>
+    <ul class="footer-links">
+      <li>
+        <a href="https://github.com/aspho-di/AI-Fitness-Coach">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:5px"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a href="https://linkedin.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:5px"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="/landing/main.js"></script>
+</body>
+</html>
